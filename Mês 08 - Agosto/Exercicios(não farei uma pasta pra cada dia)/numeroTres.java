@@ -7,12 +7,13 @@ public class numeroTres {
     //(O parâmetro do método deve ser o número inserido pelo usuário)
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-
+        System.out.println("Informe um Número");
         int numero = leitor.nextInt();
+        chamaNumeros(numero);
     }
-    public static void chamaNumeros(){
+    public static void chamaNumeros(int numero){
         for (int i = 0; i <= 20; i++) {
-            System.out.println(numero);
+            System.out.println(numero+i);
         }
     }
 }
