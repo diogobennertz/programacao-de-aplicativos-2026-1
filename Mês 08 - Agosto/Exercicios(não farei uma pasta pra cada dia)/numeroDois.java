@@ -18,9 +18,9 @@ public class numeroDois {
         String nomeAlunos = leitor.next();
         if ((nomeAlunos.equals("eduardo")) || (nomeAlunos.equals("Eduardo"))){
             chamaEduardo();
-        }else if ((nomeAlunos.equals("patrick")) || (nomeAlunos.equals("Patrick"))){
+        }else if (nomeAlunos.equalsIgnoreCase("patrick")){
             chamaPatrick();
-        }else if ((nomeAlunos.equals("Henrique")) || (nomeAlunos.equals("henrique"))){
+        }else if (nomeAlunos.equalsIgnoreCase("Henrique")){
             chamaHenrique();
         }else{
             System.out.println("Opção Inválida");
