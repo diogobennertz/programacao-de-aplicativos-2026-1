@@ -17,7 +17,13 @@ public class numeroUm {
         System.out.println("1-Verão       |   2-Outuno");
         System.out.println("3-Inverno     |   4-Primavera");
         String estacao = leitor.next();
-        if (estacao.equals("1")){
+        switch (estacao){
+            case ("1") -> imprimeVerao();
+            case ("2") -> imprimeOutono();
+            case ("3") -> imprimeInverno();
+            case ("4") -> imprimePrimavera();
+        }
+        /*if (estacao.equals("1")){
             imprimeVerao();
         } else if(estacao.equals("2")){
             imprimeOutono();
@@ -28,6 +34,7 @@ public class numeroUm {
         }else {
             System.out.println("Valor Inválido, Tente novamente!");
         }
+         */
     }
     public static void imprimeVerao(){
         System.out.println("É Verão\nE o tempo está quente");
