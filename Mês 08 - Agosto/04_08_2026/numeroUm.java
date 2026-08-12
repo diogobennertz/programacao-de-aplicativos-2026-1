@@ -30,15 +30,15 @@ public class numeroUm {
         }
     }
     public static void imprimeVerao(){
-        System.out.println("Verão");
+        System.out.println("É Verão\nE o tempo está quente");
     }
     public static void imprimeOutono(){
-        System.out.println("Outono");
+        System.out.println("É Outono\nE as folhas caem");
     }
     public static void imprimeInverno(){
-        System.out.println("Inverno");
+        System.out.println("É Inverno\nE está frio");
     }
     public static void imprimePrimavera(){
-        System.out.println("Primavera");
+        System.out.println("É Primavera\nE ta calor pra caralho");
     }
 }
