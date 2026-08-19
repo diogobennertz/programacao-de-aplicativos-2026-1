@@ -12,19 +12,36 @@ import java.util.Scanner;
 //Imprima o seu nome Star Wars
 //As entradas serão os nomes completos.
 //Para separar, por exemplo as três primeiras letras do seu sobrenome, use o método
-//substring() das Strings
+//substring() das Strings*/
+
 
 public class numeroSeis {
 
-    public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        System.out.println("Informe Seu Nome: ");
-        String nome = leitor.next();
-        System.out.println("Informe Seu Sobrenome: ");
-        String sobreNome = leitor.next();
+    public static String generateStarWarsName(String nomeCompleto) {
 
+        String[] partes = nomeCompleto.split(" ");
+
+        String nome = partes[0];
+        String sobrenome = partes[partes.length - 1];
+
+        String primeiroNome = sobrenome.substring(0, 3) + nome.substring(0, 2);
+
+        return primeiroNome;
     }
-    public static String generateStarWarsNameX(String nomeStarWars){
 
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite seu nome completo: ");
+        String nomeCompleto = scanner.nextLine();
+
+        String nomeStarWars = generateStarWarsName(nomeCompleto);
+
+        System.out.println("Seu nome Star Wars é: " + nomeStarWars);
+
+        scanner.close();
     }
 }
+
+
