@@ -12,10 +12,8 @@ public class numeroNove {
         double n1 = leitor.nextDouble();
         System.out.println(verdadeOuNao(n1));
     }
-    public static boolean verdadeOuNao(double n1){
-        if (n1%2==0){
-            return true;
-        }
-        return false;
+
+    public static boolean verdadeOuNao(double n1) {
+        return n1%2==0;
     }
 }
