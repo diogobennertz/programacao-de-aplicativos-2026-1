@@ -3,24 +3,11 @@
 
 public class Main {
     public static void main(String[] args) {
-        mercado unidadeDeBlumenau = new mercado();
-        mercado unidadeDeJoinville = new mercado();
-        mercado unidadeDeFlorianopolis = new mercado();
-        unidadeDeBlumenau.nome = "Mercado de Blumenau";
-        unidadeDeFlorianopolis.nome = "Mercado de Florianópolis";
-        unidadeDeJoinville.nome = "Mercado de Joinville";
-        unidadeDeBlumenau.numLaranjas = 5;
-        unidadeDeFlorianopolis.numLaranjas = 6;
-        unidadeDeJoinville.numLaranjas = 7;
-        unidadeDeBlumenau.precoLaranjas = 3.50;
-        unidadeDeJoinville.precoLaranjas = 3.75;
-        unidadeDeFlorianopolis.precoLaranjas = 4.00;
-        unidadeDeBlumenau.precoMacas = 2.50;
-        unidadeDeFlorianopolis.precoMacas = 3.50;
-        unidadeDeJoinville.precoMacas = 2.75;
-        unidadeDeBlumenau.numMacas = 15000;
-        unidadeDeFlorianopolis.numMacas = 6;
-        unidadeDeJoinville.numMacas = 5;
+    mercado unidadeDeBlumenau = new mercado("Mercado de Blumenau", 5, 3.50, 15000, 2.50);
+    mercado unidadeDeJoinville = new mercado("Mercado de Joinville", 7, 3.75, 5, 2.75);
+    mercado unidadeDeFlorianopolis = new mercado("Mercado de Florianópolis", 6, 4.00, 6, 3.50);
+
+
 
         //a) Quem teve a maior receita vendendo maçãs?
         //b) Quem teve a menor receita vendendo laranjas?
