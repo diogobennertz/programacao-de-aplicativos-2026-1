@@ -13,6 +13,7 @@ public class mercado {
         this.precoLaranjas = precoLaranjas;
     }
 
+    public
     public double calcularReceitaMacas(){
         return numMacas*precoMacas;
     }
@@ -22,4 +23,15 @@ public class mercado {
     public double calcularReceitaTotal(){
         return calcularReceitaLaranjas()+calcularReceitaMacas();
     }
+    @Override
+    public String toString() {
+        return "mercado{" +
+                "nome='" + nome + '\'' +
+                ", numMacas=" + numMacas +
+                ", precoMacas=" + precoMacas +
+                ", numLaranjas=" + numLaranjas +
+                ", precoLaranjas=" + precoLaranjas +
+                '}';
+    }
+
 }
