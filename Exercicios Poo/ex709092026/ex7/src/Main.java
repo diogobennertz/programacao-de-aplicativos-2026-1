@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("--- Lista de Aeronaves ---");
         for (Aeronave a : aeronaves) {
-            System.out.println(a.toString()); // Usa getters indiretamente pelo toString
+            System.out.println(a.toString());
         }
 
         System.out.println("\n--- Resultados dos Cálculos ---");
@@ -19,7 +19,7 @@ public class Main {
         Aeronave maisTempoNoAr = aeronaves[0];
         Aeronave maisLonge = aeronaves[0];
 
-        // Varredura do array utilizando corretamente os métodos Getters e de cálculo
+        // Varredura do array utilizando os métodos Getters e de cálculo
         for (int i = 1; i < aeronaves.length; i++) {
             if (aeronaves[i].getPassageiros() > maiorPassageiros.getPassageiros()) {
                 maiorPassageiros = aeronaves[i];
@@ -42,17 +42,23 @@ public class Main {
                 maisLonge.getModelo(), maisLonge.calcularAlcanceMaximo());
 
 
-        // --- ÁREA DE TESTE DE VALIDAÇÃO (SETTERS) ---
+        // --- ÁREA DE TESTE DE VALIDAÇÃO (SETTERS COM ATRIBUIÇÃO FORÇADA) ---
         System.out.println("\n--- Testando as validações dos Setters ---");
 
         System.out.println("Tentando definir passageiros negativos no Cessna...");
-        a3.setPassageiros(-5); // Deve printar a mensagem de erro na tela e recusar a alteração
-        System.out.println("Passageiros atuais do Cessna (continua protegido): " + a3.getPassageiros());
+        a3.setPassageiros(-5); // Corrige para 0
+        System.out.println("Passageiros atuais do Cessna: " + a3.getPassageiros());
 
         System.out.println("\nTentando definir velocidade zero no Concorde...");
-        a4.setVelMaxima(0); // Deve printar o erro na tela e recusar
+        a4.setVelMaxima(0); // Corrige para 1.0
+        System.out.println("Velocidade atual do Concorde: " + a4.getVelMaxima() + " km/h");
 
         System.out.println("\nTentando colocar nome em branco no Boeing...");
-        a1.setModelo("   "); // O isBlank() pega o erro aqui e não deixa alterar
+        a1.setModelo("   "); // Corrige para "Modelo Desconhecido"
+        System.out.println("Modelo atual da aeronave 1: " + a1.getModelo());
+
+        System.out.println("\n--- Criando nova aeronave defeituosa via construtor ---");
+        Aeronave erro = new Aeronave("", -10, 0, 0, 0); // Todas as correções automáticas vão rodar aqui
+        System.out.println(erro.toString());
     }
 }
