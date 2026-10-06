@@ -1,4 +1,4 @@
-public class pessoaFisica {
+    public class pessoaFisica {
     private String nome;
     private String cpf;
     private String uf;
