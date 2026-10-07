@@ -10,4 +10,15 @@ public class Concessionaria {
     public void adicionarVeiculo(Veiculo v){
         veiculos.add(v);
     }
+    public Veiculo obterVeiculoMaisBarato(){
+        double menorpreco = Double.MAX_VALUE;
+        Veiculo veiculoMaisBarato = null;
+        for (Veiculo v : veiculos){
+            if (v.getPreco() < menorpreco){
+                menorpreco = v.getPreco();
+                veiculoMaisBarato = v;
+            }
+        }
+        return veiculoMaisBarato;
+    }
 }
