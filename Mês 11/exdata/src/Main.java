@@ -1,8 +1,6 @@
 import java.time.LocalDate;
 
 public static void main(String[] args) {
-    LocalDate hoje = LocalDate.now();
-    System.out.println(hoje);
     LocalDate dataNascimento = LocalDate.of(2003,4,2);
     ValidadorIdade validador = new ValidadorIdade();
     Boolean maiorDeIdade = validador.ehMaiorDeIdade(dataNascimento);
